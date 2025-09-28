@@ -8,15 +8,8 @@ import { Integrantes } from './pages/integrantes';
 import { Faq } from './pages/faq';
 import { NotFound } from './pages/notfound';
 import { Contatos } from './pages/contatos';
+import { Solution } from './pages/solution';
 
-
-
-const Solucao = () => (
-    <main className="p-8">
-        <h1 className="text-2xl font-bold">Nossa Solução</h1>
-        <p className="mt-4">Veja como nossa aplicação funciona.</p>
-    </main>
-);
 
 
 function App() {
@@ -29,7 +22,7 @@ function App() {
           <Route path="/integrantes" element={<Integrantes />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contatos" element={<Contatos />} />
-          <Route path="/solucao" element={<Solucao />} />
+          <Route path="/solution" element={<Solution />} />
         </Route>
       </Routes>
     </BrowserRouter>
