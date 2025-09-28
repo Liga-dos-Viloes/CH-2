@@ -23,9 +23,6 @@ export function Layout() {
                     </Link>
                 </div>
             </nav>
-            <header>
-                <Outlet />
-            </header>
             <main>
                 <Outlet />
             </main>
