@@ -4,7 +4,7 @@ export function ConectaReab() {
 
     return(
         <>
-        <header className="pt-8 pb-8 w-full text-5xl font-extrabold shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+        <header className="pt-8 pb-8 w-full text-5xl font-smibold shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
             <div className="w-full flex-colum text-center place-items-center">
                 <h1>ConectaReab</h1>
                 <img src={logo} alt="Celular com simbolos de medicina" className='flex w-180 place-content-center' />

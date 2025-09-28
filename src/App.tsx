@@ -5,13 +5,7 @@ import './index.css';
 import { Layout } from './components/layout';
 import { ConectaReab } from './pages/conecta';
 import { Integrantes } from './pages/integrantes';
-
-const FAQ = () => (
-    <main className="p-8">
-        <h1 className="text-2xl font-bold">Perguntas Frequentes (FAQ)</h1>
-        <p className="mt-4">Tire suas dúvidas aqui.</p>
-    </main>
-);
+import { Faq } from './pages/faq';
 
 const Contato = () => (
     <main className="p-8">
@@ -35,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ConectaReab />} />
         <Route path="/integrantes" element={<Integrantes />} />
-        <Route path="/faq" element={<FAQ />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/solucao" element={<Solucao />} />
         
