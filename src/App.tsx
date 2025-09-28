@@ -4,13 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import { Layout } from './components/layout';
 import { ConectaReab } from './pages/conecta';
-
-const Integrantes = () => (
-    <main className="p-8">
-        <h1 className="text-2xl font-bold">Nossa Equipe</h1>
-        <p className="mt-4">Conheça os integrantes do projeto.</p>
-    </main>
-);
+import { Integrantes } from './pages/integrantes';
 
 const FAQ = () => (
     <main className="p-8">
