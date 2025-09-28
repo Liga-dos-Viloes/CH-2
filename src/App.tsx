@@ -6,13 +6,10 @@ import { Layout } from './components/layout';
 import { ConectaReab } from './pages/conecta';
 import { Integrantes } from './pages/integrantes';
 import { Faq } from './pages/faq';
+import { NotFound } from './pages/notfound';
+import { Contatos } from './pages/contatos';
 
-const Contato = () => (
-    <main className="p-8">
-        <h1 className="text-2xl font-bold">Contato</h1>
-        <p className="mt-4">Entre em contato conosco.</p>
-    </main>
-);
+
 
 const Solucao = () => (
     <main className="p-8">
@@ -25,20 +22,15 @@ const Solucao = () => (
 function App() {
   return (
     <BrowserRouter>
-      <Layout />
       <Routes>
-        <Route path="/" element={<ConectaReab />} />
-        <Route path="/integrantes" element={<Integrantes />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/solucao" element={<Solucao />} />
-        
-        {/* page n encontrada */}
-        <Route path="*" element={
-          <main className="p-8 text-center">
-            <h1 className="text-4xl font-bold">404 - Página Não Encontrada</h1>
-          </main>
-        } />
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<ConectaReab/>}/>
+          <Route path="*" element={<NotFound />} />
+          <Route path="/integrantes" element={<Integrantes />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contatos" element={<Contatos />} />
+          <Route path="/solucao" element={<Solucao />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

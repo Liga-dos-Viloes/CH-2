@@ -15,7 +15,7 @@ export function Layout() {
                     <Link to="/faq" className='hover:text-gray-600'>
                         FAQ
                     </Link>
-                    <Link to="/contact" className='hover:text-gray-600'>
+                    <Link to="/contatos" className='hover:text-gray-600'>
                         Contatos
                     </Link>
                     <Link to="/solution" className='hover:text-gray-600'>
