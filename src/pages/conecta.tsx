@@ -11,23 +11,33 @@ export function ConectaReab() {
                 <h2>Acessível para quem precisa</h2>
             </div>
         </header>
-        <main className="p-8">
-            <section>
-                <article className='py-8 flex gap-2 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
-                    <div className='py-5 text-center w-[50%] h-48 justify-end pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
-                        <h2 className='font-semibold'>
+        <main className="py-8 gap-8">
+            <section className=''>
+                <article className=' flex gap-8 pr-5 pl-5'>
+                    <div className='py-5 text-center w-[50%] h-96 justify-end pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex-colum place-content-end'>
+                        <h2 className='font-bold text-5xl pb-3'>
                         A necessidade de uma mudança 
                         </h2>
-                        <p className='text-end'>
+                        <p className=''>
                             Pouca acessibildade, Ausencia em consultas, Grande impacto negativo
                         </p>
                     </div>
-                    <div className='py-5 text-center w-[50%] h-48 justify-end pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
-                        <h2 className='font-semibold'>
+                    <div className='py-5 text-center w-[50%] h-96 pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex-colum place-content-end'>
+                        <h2 className='font-bold text-5xl pb-3'>
                             bla bla
                         </h2>
-                        <p className='text-end'>
+                        <p className=''>
                             pepep
+                        </p>
+                    </div>
+                </article>
+                <article className='pt-8 pr-2 pl-2 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+                    <div className='py-5 text-center w-full h-96 pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex-colum place-content-start'>
+                        <h2 className='font-bold text-5xl pb-3'>
+                        A necessidade de uma mudança 
+                        </h2>
+                        <p className=''>
+                            Pouca acessibildade, Ausencia em consultas, Grande impacto negativo
                         </p>
                     </div>
                 </article>
