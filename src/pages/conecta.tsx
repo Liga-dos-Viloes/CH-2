@@ -12,8 +12,26 @@ export function ConectaReab() {
             </div>
         </header>
         <main className="p-8">
-            <h1 className="text-2xl font-bold">Página Inicial</h1>
-            <p className="mt-4">Bem-vindo ao AlertAI!</p>
+            <section>
+                <article className='py-8 flex gap-2 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+                    <div className='py-5 text-center w-[50%] h-48 justify-end pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+                        <h2 className='font-semibold'>
+                        A necessidade de uma mudança 
+                        </h2>
+                        <p className='text-end'>
+                            Pouca acessibildade, Ausencia em consultas, Grande impacto negativo
+                        </p>
+                    </div>
+                    <div className='py-5 text-center w-[50%] h-48 justify-end pr-5 pl-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)]'>
+                        <h2 className='font-semibold'>
+                            bla bla
+                        </h2>
+                        <p className='text-end'>
+                            pepep
+                        </p>
+                    </div>
+                </article>
+            </section>
         </main>
         </>
     
