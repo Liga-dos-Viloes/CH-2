@@ -1,69 +1,136 @@
-# React + TypeScript + Vite
+Perfeito! Aqui está o **README completo em um único arquivo**, já com **Uso** e **Licença** incluídos, pronto para copiar:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# ConectaReab - Frontend
 
-Currently, two official plugins are available:
+Projeto frontend da plataforma **ConectaReab**, desenvolvido em **React** com **TypeScript** e **Tailwind CSS**. Este projeto contém componentes reutilizáveis para construção da interface, incluindo cards, FAQ, layout principal e footer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS
+- React Router DOM
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Estrutura de Componentes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+├── assets/          # Imagens e ícones
+├── components/      # Componentes reutilizáveis
+│   ├── FaqItem.tsx
+│   ├── FeatureCard.tsx
+│   ├── Footer.tsx
+│   ├── InfoCard.tsx
+│   ├── Layout.tsx
+│   ├── Loading.tsx
+│   └── MemberCard.tsx
+├── types/           # Tipos TypeScript
+└── App.tsx
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Componentes Principais
+
+### `FaqItem`
+Componente de FAQ expansível:
+- Props:
+  - `question`: string — pergunta da FAQ.
+  - `answer`: string — resposta da FAQ.
+- Permite abrir e fechar a resposta com animação suave.
+
+### `FeatureCard`
+Card de funcionalidades do projeto:
+- Props:
+  - `number`: string — número ou índice da funcionalidade.
+  - `title`: string — título da funcionalidade.
+  - `description`: string — descrição da funcionalidade.
+
+### `Footer`
+Rodapé do site:
+- Links para páginas principais, suporte e informações sobre o projeto.
+- Inclui logo com link externo.
+
+### `InfoCard`
+Card com background de imagem:
+- Props:
+  - `title`: string — título do card.
+  - `description`: string — descrição do card.
+  - `backgroundImage`: string — URL da imagem de fundo.
+  - `className?`: string — classes adicionais opcionais.
+
+### `Layout`
+Componente que define a estrutura da página:
+- Navbar com links de navegação.
+- Área principal com `Outlet` do React Router.
+- Footer incluso.
+
+### `Loading`
+Componente simples de loading:
+- Exibe mensagem "Carregando..." com animação `pulse`.
+
+### `MemberCard`
+Card de integrante da equipe:
+- Props:
+  - `member`: objeto com informações do integrante (`name`, `rm`, `description`, `quote`, `image`, `linkedin`, `github`, `layout`).
+- Layout flexível (imagem à esquerda ou direita).
+- Links para GitHub e LinkedIn do integrante.
+
+---
+
+## Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/conectareab-frontend.git
+````
+
+2. Entre na pasta do projeto:
+
+```bash
+cd conectareab-frontend
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+---
+
+## Uso
+
+* Configure as rotas no `React Router` usando o componente `Layout`.
+* Utilize os componentes `FaqItem`, `FeatureCard`, `InfoCard` e `MemberCard` para construir as páginas do site.
+* Para o FAQ, passe a pergunta e resposta como props no `FaqItem`.
+* Para os cards de funcionalidades ou integrantes, passe os dados correspondentes como props.
+* Personalize cores, imagens e textos diretamente via props ou Tailwind CSS.
+* O `Loading` pode ser usado como fallback durante carregamento de dados assíncronos.
+
+---
+
+## Licença
+
+Este projeto é licenciado sob a licença **MIT**.
+Você é livre para usar, modificar e distribuir este projeto, desde que mantenha a atribuição original.
+
+```
+
+Se você quiser, posso criar **uma versão ainda mais enxuta e visual**, que funciona como um **README “profissional” de GitHub**, com prints dos cards e FAQ simulados.  
+
+Quer que eu faça isso também?
 ```
