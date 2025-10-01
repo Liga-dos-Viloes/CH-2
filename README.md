@@ -1,6 +1,4 @@
-Perfeito! Aqui está o **README completo em um único arquivo**, já com **Uso** e **Licença** incluídos, pronto para copiar:
 
-```markdown
 # ConectaReab - Frontend
 
 Projeto frontend da plataforma **ConectaReab**, desenvolvido em **React** com **TypeScript** e **Tailwind CSS**. Este projeto contém componentes reutilizáveis para construção da interface, incluindo cards, FAQ, layout principal e footer.
@@ -18,7 +16,7 @@ Projeto frontend da plataforma **ConectaReab**, desenvolvido em **React** com **
 
 ## Estrutura de Componentes
 
-```
+
 
 src/
 ├── assets/          # Imagens e ícones
@@ -33,7 +31,7 @@ src/
 ├── types/           # Tipos TypeScript
 └── App.tsx
 
-````
+
 
 ---
 
