@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import { Footer } from './footer';
 
 
 export function Layout() {
@@ -27,7 +28,7 @@ export function Layout() {
                 <Outlet />
             </main>
             <footer>
-                <></>
+                <Footer/>
             </footer>
         </div>
     );
