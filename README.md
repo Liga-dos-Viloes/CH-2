@@ -126,9 +126,5 @@ npm start
 Este projeto é licenciado sob a licença **MIT**.
 Você é livre para usar, modificar e distribuir este projeto, desde que mantenha a atribuição original.
 
-```
 
-Se você quiser, posso criar **uma versão ainda mais enxuta e visual**, que funciona como um **README “profissional” de GitHub**, com prints dos cards e FAQ simulados.  
 
-Quer que eu faça isso também?
-```
