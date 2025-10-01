@@ -1,15 +1,9 @@
 import linkedinIcon from '../assets/icons8-linkedin.svg';
 import githubIcon from '../assets/icons8-github.svg';
+import type { Member } from '../types/types';
 
-interface Member {
-  name: string;
-  rm: string;
-  description: string;
-  quote: string;
-  image: string;
-  linkedin: string;
-  github: string;
-  layout: 'image-left' | 'image-right';
+interface MemberCardProps {
+  member: Member;
 }
 
 interface MemberCardProps {

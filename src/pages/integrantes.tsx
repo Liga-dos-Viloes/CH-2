@@ -1,22 +1,22 @@
 import { MemberCard } from '../components/MemberCard';
 
-// Importando as imagens dos integrantes
 import logo from '../assets/dev_.png';
 import kaikyImg from '../assets/kaiky.png';
 import solanoImg from '../assets/solano.png';
 import leandroImg from '../assets/leandro.png';
+import type { Member } from '../types/types';
 
 
-const membersData = [
+const membersData: Member= [
   {
     name: "Kaiky Pereira",
     rm: "564578",
     description: "Apaixonado por tecnologia com foco em soluções que realmente façam a diferença. A ideia do AlertaAI nasceu da necessidade de otimizar a comunicação em momentos críticos de desastre.",
     quote: "Percebi que uma ferramenta que conectasse diretamente a Defesa Civil aos cidadãos, de forma ágil e visual, seria fundamental para salvar vidas e garantir a segurança.",
-    image: kaikyImg, // Imagem importada
+    image: kaikyImg,
     linkedin: "https://www.linkedin.com/in/kaikypereira/",
     github: "https://github.com/rodrigueszkkk",
-    layout: "image-left" // Define a posição da imagem
+    layout: "image-left"
   },
   {
     name: "Gabriel Solano",
@@ -26,7 +26,7 @@ const membersData = [
     image: solanoImg,
     linkedin: "https://www.linkedin.com/in/gabriel-solano-165290363/",
     github: "https://github.com/GabSolano",
-    layout: "image-right" // Define a posição da imagem
+    layout: "image-right" 
   },
   {
     name: "Leandro Guarido",
@@ -60,9 +60,8 @@ export function Integrantes() {
             </p>
           </div>
 
-          {/* Mapeando os dados para renderizar um card para cada integrante */}
-          {membersData.map((member) => (
-            <MemberCard key={member.rm} member={member} />
+          {membersData.map((Member) => (
+            <MemberCard key={Member.rm} member={Member} />
           ))}
         </section>
       </main>
