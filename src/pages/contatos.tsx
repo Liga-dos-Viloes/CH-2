@@ -48,7 +48,7 @@ const [formData, setFormData] = useState<FormData>({
     }
 
     alert("Mensagem enviada com sucesso!");
-    setFormData({ name: '', email: '', message: '' }); // Limpa o formulário
+    setFormData({ name: '', email: '', message: '' });
   };
 
 
@@ -101,7 +101,6 @@ const [formData, setFormData] = useState<FormData>({
             />
           </section>
 
-          {/* Formulário */}
           <section id="form" className="bg-[#f0f0f0] rounded-2xl w-full max-w-5xl p-8 md:p-12 mt-4 shadow-sm">
             <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4">
               <h2 className="text-3xl font-bold text-center">Formulário de Contato</h2>
