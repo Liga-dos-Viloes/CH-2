@@ -1,13 +1,13 @@
-import { MemberCard } from '../components/MemberCard';
-
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { IntegrantesCardMinimizado } from '../components/IntegrantesCardMinimizado'; 
 import logo from '../assets/dev_.png';
 import kaikyImg from '../assets/kaiky.png';
 import solanoImg from '../assets/solano.png';
 import leandroImg from '../assets/leandro.png';
 import type { Member } from '../types/types';
 
-
-const membersData: Member= [
+const membersData: Member[] = [
   {
     name: "Kaiky Pereira",
     rm: "564578",
@@ -40,32 +40,45 @@ const membersData: Member= [
   }
 ];
 
-
 export function Integrantes() {
+    const [team, setTeam] = useState<Member[]>([]);
+    const navigate = useNavigate();
 
-    return(
+    useEffect(() => {
+      setTeam(membersData);
+    }, []);
+
+    const handleNavigateToDetail = (rm: string) => {
+        navigate(`/integrantes/${rm}`);
+    };
+
+    return (
         <>
-        <header className="pt-8 pb-8 w-full text-5xl  shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
-            <div className="w-full flex-colum text-center place-items-center">
-                <img src={logo} alt="Celular com simbolos de medicina" className='flex w-152 place-content-center '/>
-                <h2 className='text-gray-500 font-thin'>A junção de ideas num projeto só</h2>
-            </div>
-        </header>
-          <main className="py-16 px-4">
-        <section className="max-w-5xl mx-auto flex flex-col items-center gap-12">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold">Componentes Principais</h2>
-            <p className="text-texto-secundario text-lg mt-4 max-w-2xl">
-              O AlertAI é um projeto desenvolvido por três integrantes, cada um com habilidades únicas que se complementam para criar uma solução inovadora e eficaz.
-            </p>
-          </div>
+            <header className="pt-8 pb-8 w-full text-5xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+                <div className="w-full flex-colum text-center place-items-center">
+                    <img src={logo} alt="Logo do projeto" className='mx-auto w-40'/>
+                    <h2 className='text-gray-500 font-thin'>A junção de ideias num projeto só</h2>
+                </div>
+            </header>
+            <main className="py-16 px-4">
+                <section className="max-w-5xl mx-auto flex flex-col items-center gap-12">
+                    <div className="text-center">
+                        <h2 className="text-4xl font-bold">Nossa Equipe</h2>
+                        <p className="text-texto-secundario text-lg mt-4 max-w-2xl">
+                          Conheça os integrantes por trás do ConectaReab. Clique em um membro para ver mais detalhes.
+                        </p>
+                    </div>
 
-          {membersData.map((Member) => (
-            <MemberCard key={Member.rm} member={Member} />
-          ))}
-        </section>
-      </main>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                        {team.map((member) => (
+                            <div key={member.rm} onClick={() => handleNavigateToDetail(member.rm)} className="cursor-pointer">
+                                <IntegrantesCardMinimizado member={member} />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </main>
         </>
-    
-)
+    );
 }
