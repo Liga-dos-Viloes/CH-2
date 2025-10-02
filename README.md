@@ -17,7 +17,6 @@ Projeto frontend da plataforma **ConectaReab**, desenvolvido em **React** com **
 ## Estrutura de Componentes
 
 
-
 src/
 ├── assets/          # Imagens e ícones
 ├── components/      # Componentes reutilizáveis
@@ -86,26 +85,26 @@ Card de integrante da equipe:
 ## Instalação
 
 1. Clone o repositório:
-```bash
+``` 
 git clone https://github.com/seu-usuario/conectareab-frontend.git
 ````
 
 2. Entre na pasta do projeto:
 
-```bash
+``` 
 cd conectareab-frontend
 ```
 
 3. Instale as dependências:
 
-```bash
+``` 
 npm install
 ```
 
 4. Inicie o servidor de desenvolvimento:
 
-```bash
-npm start
+``` 
+npm run dev
 ```
 
 ---
@@ -118,13 +117,4 @@ npm start
 * Para os cards de funcionalidades ou integrantes, passe os dados correspondentes como props.
 * Personalize cores, imagens e textos diretamente via props ou Tailwind CSS.
 * O `Loading` pode ser usado como fallback durante carregamento de dados assíncronos.
-
----
-
-## Licença
-
-Este projeto é licenciado sob a licença **MIT**.
-Você é livre para usar, modificar e distribuir este projeto, desde que mantenha a atribuição original.
-
-
 
