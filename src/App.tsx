@@ -8,6 +8,10 @@ import { NotFound } from './pages/notfound';
 import { Contatos } from './pages/contatos';
 import { Solution } from './pages/solution';
 import { Integrantes } from './pages/integrantes';
+import { PacientesPage } from './pages/pacientes';
+import { ConsultasPage } from './pages/consultas';
+import { MedicosPage } from './pages/medicos';
+
 import IntegranteDetailPage from './pages/integrantesDetailPage';
 
 import kaikyImg from './assets/kaiky.png';
@@ -51,6 +55,10 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/solution" element={<Solution />} />
+
+          <Route path="/pacientes" element={<PacientesPage />} />
+          <Route path="/consultas" element={<ConsultasPage />} />
+          <Route path="/medicos" element={<MedicosPage />} />
 
           <Route 
             path="/integrantes/:rm" 

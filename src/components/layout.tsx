@@ -22,6 +22,15 @@ export function Layout() {
                     <Link to="/solution" className='hover:text-gray-600'>
                         Solução
                     </Link>
+                    <Link to="/pacientes" className='hover:text-gray-600'>
+                        Pacientes (API)
+                    </Link>
+                    <Link to="/consultas" className='hover:text-gray-600'>
+                        Consultas (API)
+                    </Link>
+                    <Link to="/medicos" className='hover:text-gray-600'>
+                        Medicos (API)
+                    </Link>
                 </div>
             </nav>
             <main>
